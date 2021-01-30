@@ -1,0 +1,19 @@
+{
+  "name": "express-restful-api",
+  "version": "0.0.1",
+  "description": "Node.js Discord bot sample ready to deploy on Stackean.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "pm2 server.js",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "author": "Stackean",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stackean/sample-express-restful-api.git"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
