@@ -14,24 +14,6 @@ onInstall:
     archive: https://github.com/stackean/sample-express-restful-api/archive/main.zip
     name: sample-express-restful-api
     context: ROOT
-  addEndpoint:
   cmd:
     npm install
     pm2 start
-  return:
-    result: success
-    email: success
-
-actions:
-  addEndpoint:
-    api: environment.control.AddEndpoint
-    nodeId: ${nodes.cp.id}
-    privatePort: 3000
-    protocol: TCP
-    name: admin
-    setGlobals:  
-      publicPort: ${response.object.publicPort}
-        
-success: |
-  Your Express Restful API project is successfully installed. Please visit url below to browse your API endpoints.
-  **URL**: http://node${nodes.cp.id}-${env.domain}:${globals.publicPort}
