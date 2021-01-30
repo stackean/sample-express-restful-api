@@ -1,0 +1,19 @@
+type: install
+name: Stackean Express Restful API
+engine: nodejs
+
+nodes:
+  nodeType: nodejs
+  displayName: node-${fn.random}
+  diskLimit: 5
+  cloudlets: 1
+  flexibleCloudlets: 4
+
+onInstall:
+  deploy:
+    archive: https://github.com/stackean/sample-express-restful-api/archive/main.zip
+    name: sample-express-restful-api
+    context: ROOT
+  cmd:
+    - npm install
+    - pm2 start
